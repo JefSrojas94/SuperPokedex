@@ -62,9 +62,14 @@ function createPokemon( pokemon){
     pokemonName.classList.add('name');
     pokemonName.textContent = pokemon.name;
 
+    const pokemonType = document.createElement('p');
+    pokemonType.innerText = `Tipo: ${JSON.stringify(pokemon.types[0].type.name)}`;
+
+    
     card.appendChild(spriteContainer);
     card.appendChild(pokemonNumber);
     card.appendChild(pokemonName);
+    card.appendChild(pokemonType);
 
     const cardBack = document.createElement('div');
     cardBack.classList.add('pokemon-block-back');
